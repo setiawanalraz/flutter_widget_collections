@@ -38,11 +38,6 @@ List<Store> storeItems = [
     itemUrl: "https://www.youtube.com/",
   ),
   Store.items(
-    itemName: "Stack Overflow",
-    itemImage: "https://madsourcer.com/wp-content/uploads/stackoverflow.png",
-    itemUrl: "https://stackoverflow.com/",
-  ),
-  Store.items(
     itemName: "GitHub",
     itemImage: "https://goo.gl/u2qZQB",
     itemUrl: "https://github.com/",
