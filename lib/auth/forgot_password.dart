@@ -1,4 +1,3 @@
-import '../auth/login.dart';
 import '../style/style.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -88,36 +87,35 @@ class ForgotPassword extends StatelessWidget {
                       ),
 
                       //reset password button
-                      GestureDetector(
-                        onTap: () => Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return Login();
-                        })),
-                        child: Container(
-                          height: 30,
-                          width: double.infinity,
-                          margin: EdgeInsets.symmetric(horizontal: 75),
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                                colors: [Color(0xff0096ff), Color(0xff6610f2)],
-                                begin: FractionalOffset.topLeft,
-                                end: FractionalOffset.bottomRight),
-                            borderRadius: BorderRadius.circular(50),
-                            color: Colors.blue[700],
-                          ),
-                          child: Align(
-                            alignment: Alignment.center,
-                            child: Text(
-                              "Reset Password",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold),
+                      Container(
+                        height: 30,
+                        width: double.infinity,
+                        margin: EdgeInsets.symmetric(horizontal: 75),
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                              colors: [Color(0xff0096ff), Color(0xff6610f2)],
+                              begin: FractionalOffset.topLeft,
+                              end: FractionalOffset.bottomRight),
+                          borderRadius: BorderRadius.circular(50),
+                          color: Colors.blue[700],
+                        ),
+                        child: Material(
+                          color: Colors.transparent,
+                          child: InkWell(
+                            onTap: () => Navigator.pop(context),
+                            child: Center(
+                              child: Text(
+                                "Reset Password",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold),
+                              ),
                             ),
                           ),
                         ),
                       ),
-                      //end of login button
+                      //end of reset password button
                     ],
                   ),
                 ),
