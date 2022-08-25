@@ -1,6 +1,7 @@
+import 'package:appbar_gradasi_dengan_corak/auth/login.dart';
 import 'package:appbar_gradasi_dengan_corak/style/style.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+// import 'package:flutter/services.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
@@ -17,15 +18,19 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         style: TextStyle(color: Colors.white),
       ),
       actions: [
+        // IconButton(
+        //   icon: Icon(Icons.settings),
+        //   onPressed: () {},
+        //   tooltip: "Settings",
+        // ),
         IconButton(
-          icon: Icon(Icons.settings),
-          onPressed: () {},
-          tooltip: "Settings",
-        ),
-        IconButton(
-          icon: Icon(Icons.exit_to_app),
-          onPressed: () => SystemNavigator.pop(),
-          tooltip: "Close App",
+          icon: Icon(Icons.logout),
+          // onPressed: () => SystemNavigator.pop(),
+          onPressed: () => Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) {
+            return Login();
+          })),
+          tooltip: "Logout",
         ),
       ],
       flexibleSpace: Container(

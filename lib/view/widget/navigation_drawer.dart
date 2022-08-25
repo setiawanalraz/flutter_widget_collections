@@ -118,7 +118,10 @@ class NavigationDrawerWidget extends StatelessWidget {
             context: context,
             applicationName: "Flutter Widget Collections",
             applicationVersion: "1.0.0",
-            applicationIcon: MyAppIcon(),
+            // applicationIcon: MyAppIcon(),
+            applicationIcon: FlutterLogo(
+              size: 64,
+            ),
             applicationLegalese:
                 "This application contain a collection of cool widgets that are in the flutter framework.");
         break;
