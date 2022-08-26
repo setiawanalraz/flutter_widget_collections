@@ -26,10 +26,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         IconButton(
           icon: Icon(Icons.logout),
           // onPressed: () => SystemNavigator.pop(),
-          onPressed: () => Navigator.pushReplacement(context,
-              MaterialPageRoute(builder: (context) {
-            return Login();
-          })),
+          onPressed: () => showAlertDialog(context),
           tooltip: "Logout",
         ),
       ],
@@ -48,4 +45,53 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
     );
   }
+}
+
+//note that you have to made this outside the class
+showAlertDialog(BuildContext context) {
+  //set up button
+  Widget cancelButton() {
+    return TextButton(
+      onPressed: () => Navigator.of(context, rootNavigator: true).pop("dialog"),
+      child: Text(
+        "Cancel",
+        style: TextStyle(color: Colors.white),
+      ),
+      style:
+          ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.green)),
+    );
+  }
+
+  Widget confirmButton() {
+    return TextButton(
+      onPressed: () {
+        Navigator.of(context, rootNavigator: true).pop("dialog");
+        Navigator.of(context).pushReplacement(
+            new MaterialPageRoute(builder: (context) => Login()));
+      },
+      style:
+          ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.red)),
+      child: Text(
+        "Confirm",
+        style: TextStyle(color: Colors.white),
+      ),
+    );
+  }
+
+  //set up alert dialog
+  AlertDialog alertDialog = new AlertDialog(
+    title: Text("Logout"),
+    content: Text("Are you sure you want to logout?"),
+    actions: [
+      confirmButton(),
+      cancelButton(),
+    ],
+  );
+
+  //show dialog
+  showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alertDialog;
+      });
 }

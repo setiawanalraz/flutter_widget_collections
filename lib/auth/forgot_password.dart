@@ -100,8 +100,10 @@ class ForgotPassword extends StatelessWidget {
                           color: Colors.blue[700],
                         ),
                         child: Material(
+                          borderRadius: BorderRadius.circular(50),
                           color: Colors.transparent,
                           child: InkWell(
+                            borderRadius: BorderRadius.circular(50),
                             onTap: () => Navigator.pop(context),
                             child: Center(
                               child: Text(

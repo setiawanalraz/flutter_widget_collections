@@ -183,8 +183,10 @@ class Login extends StatelessWidget {
                         borderRadius: BorderRadius.circular(50),
                       ),
                       child: Material(
+                        borderRadius: BorderRadius.circular(50),
                         color: Colors.transparent,
                         child: InkWell(
+                          borderRadius: BorderRadius.circular(50),
                           onTap: () => Navigator.push(
                               context,
                               MaterialPageRoute(
