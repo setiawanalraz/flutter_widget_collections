@@ -118,10 +118,10 @@ class NavigationDrawerWidget extends StatelessWidget {
             context: context,
             applicationName: "Flutter Widget Collections",
             applicationVersion: "1.0.0",
-            // applicationIcon: MyAppIcon(),
-            applicationIcon: FlutterLogo(
-              size: 64,
-            ),
+            applicationIcon: MyAppIcon(),
+            // applicationIcon: FlutterLogo(
+            //   size: 64,
+            // ),
             applicationLegalese:
                 "This application contain a collection of cool widgets that are in the flutter framework.");
         break;
@@ -176,7 +176,7 @@ class MyAppIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image(
-      image: AssetImage("assets/icon.png"),
+      image: AssetImage("assets/logo.png"),
       width: 64,
       height: 64,
     );
