@@ -17,43 +17,46 @@ class MyCardItem extends StatelessWidget {
             SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemCount: storeItems.length,
         itemBuilder: (BuildContext context, int index) {
-          return GestureDetector(
-            onTap: () async {
-              final message = SnackBar(
-                content: Text("You were opened " + storeItems[index].itemName!),
-                action: SnackBarAction(
-                  label: "dismiss",
-                  onPressed: () {},
-                ),
-              );
-              ScaffoldMessenger.of(context).showSnackBar(message);
+          return Card(
+            elevation: 5,
+            child: Material(
+              child: InkWell(
+                onTap: () async {
+                  final message = SnackBar(
+                    content:
+                        Text("You were opened " + storeItems[index].itemName!),
+                    action: SnackBarAction(
+                      label: "dismiss",
+                      onPressed: () {},
+                    ),
+                  );
+                  ScaffoldMessenger.of(context).showSnackBar(message);
 
-              //open URL
-              await openUrl(storeItems[index].itemUrl!,
-                  forceWebView: true, enableJavaScript: true);
-            },
-            child: Card(
-              elevation: 5,
-              child: Stack(
-                alignment: FractionalOffset.bottomCenter,
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: NetworkImage(storeItems[index].itemImage!),
+                  //open URL
+                  await openUrl(storeItems[index].itemUrl!,
+                      forceWebView: true, enableJavaScript: true);
+                },
+                child: Stack(
+                  alignment: FractionalOffset.bottomCenter,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: NetworkImage(storeItems[index].itemImage!),
+                        ),
                       ),
                     ),
-                  ),
-                  Container(
-                    alignment: Alignment.center,
-                    height: 40,
-                    decoration: customBoxDecoration,
-                    child: Text(
-                      storeItems[index].itemName!,
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  )
-                ],
+                    Container(
+                      alignment: Alignment.center,
+                      height: 40,
+                      decoration: customBoxDecoration,
+                      child: Text(
+                        storeItems[index].itemName!,
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           );
