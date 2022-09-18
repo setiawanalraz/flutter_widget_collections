@@ -69,7 +69,7 @@ class Login extends StatelessWidget {
                       child: Column(
                         children: [
                           Container(
-                            padding: EdgeInsets.all(10),
+                            padding: EdgeInsets.all(5),
                             decoration: BoxDecoration(
                               border: Border(
                                   bottom: BorderSide(color: Colors.grey)),
@@ -79,11 +79,12 @@ class Login extends StatelessWidget {
                                 hintText: "Email or Phone number",
                                 hintStyle: TextStyle(color: Colors.grey),
                                 border: InputBorder.none,
+                                prefixIcon: Icon(Icons.email),
                               ),
                             ),
                           ),
                           Container(
-                            padding: EdgeInsets.all(10),
+                            padding: EdgeInsets.all(5),
                             decoration: BoxDecoration(
                               border: Border(
                                   bottom: BorderSide(color: Colors.grey)),
@@ -94,6 +95,8 @@ class Login extends StatelessWidget {
                                 hintText: "Password",
                                 hintStyle: TextStyle(color: Colors.grey),
                                 border: InputBorder.none,
+                                prefixIcon: Icon(Icons.lock),
+                                // suffixIcon: Icon(Icons.remove_red_eye),
                               ),
                             ),
                           ),
@@ -106,6 +109,7 @@ class Login extends StatelessWidget {
 
                     Container(
                       child: Material(
+                        color: Colors.transparent,
                         child: InkWell(
                           onTap: () => Navigator.push(
                               context,

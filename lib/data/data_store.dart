@@ -28,8 +28,7 @@ List<Store> storeItems = [
   ),
   Store.items(
     itemName: "iOS",
-    itemImage:
-        "https://www.clipartmax.com/png/full/190-1905305_ios-logo-icon-os-x-icon-pack-apk.png",
+    itemImage: "https://www.clipartmax.com/png/full/190-1905305_ios-logo-icon-os-x-icon-pack-apk.png",
     itemUrl: "https://www.apple.com//",
   ),
   Store.items(

@@ -67,7 +67,7 @@ class Register extends StatelessWidget {
                         child: Column(
                           children: [
                             Container(
-                              padding: EdgeInsets.all(10),
+                              padding: EdgeInsets.all(5),
                               decoration: BoxDecoration(
                                 border: Border(
                                     bottom: BorderSide(color: Colors.grey)),
@@ -77,11 +77,12 @@ class Register extends StatelessWidget {
                                   hintText: "Full Name",
                                   hintStyle: TextStyle(color: Colors.grey),
                                   border: InputBorder.none,
+                                  prefixIcon: Icon(Icons.account_box),
                                 ),
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.all(10),
+                              padding: EdgeInsets.all(5),
                               decoration: BoxDecoration(
                                 border: Border(
                                     bottom: BorderSide(color: Colors.grey)),
@@ -91,11 +92,12 @@ class Register extends StatelessWidget {
                                   hintText: "Email or Phone number",
                                   hintStyle: TextStyle(color: Colors.grey),
                                   border: InputBorder.none,
+                                  prefixIcon: Icon(Icons.email),
                                 ),
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.all(10),
+                              padding: EdgeInsets.all(5),
                               decoration: BoxDecoration(
                                 border: Border(
                                     bottom: BorderSide(color: Colors.grey)),
@@ -106,11 +108,12 @@ class Register extends StatelessWidget {
                                   hintText: "Password",
                                   hintStyle: TextStyle(color: Colors.grey),
                                   border: InputBorder.none,
+                                  prefixIcon: Icon(Icons.lock),
                                 ),
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.all(10),
+                              padding: EdgeInsets.all(5),
                               decoration: BoxDecoration(
                                 border: Border(
                                     bottom: BorderSide(color: Colors.grey)),
@@ -121,6 +124,7 @@ class Register extends StatelessWidget {
                                   hintText: "Confirm Password",
                                   hintStyle: TextStyle(color: Colors.grey),
                                   border: InputBorder.none,
+                                  prefixIcon: Icon(Icons.lock),
                                 ),
                               ),
                             ),

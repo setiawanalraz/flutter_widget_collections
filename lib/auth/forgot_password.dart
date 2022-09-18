@@ -66,7 +66,7 @@ class ForgotPassword extends StatelessWidget {
                         child: Column(
                           children: [
                             Container(
-                              padding: EdgeInsets.all(10),
+                              padding: EdgeInsets.all(5),
                               decoration: BoxDecoration(
                                 border: Border(
                                     bottom: BorderSide(color: Colors.grey)),
@@ -76,6 +76,7 @@ class ForgotPassword extends StatelessWidget {
                                   hintText: "Email or Phone number",
                                   hintStyle: TextStyle(color: Colors.grey),
                                   border: InputBorder.none,
+                                  prefixIcon: Icon(Icons.email),
                                 ),
                               ),
                             ),
