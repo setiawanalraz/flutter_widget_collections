@@ -70,34 +70,34 @@ class Login extends StatelessWidget {
                         children: [
                           Container(
                             padding: EdgeInsets.all(5),
-                            decoration: BoxDecoration(
-                              border: Border(
-                                  bottom: BorderSide(color: Colors.grey)),
-                            ),
                             child: TextField(
                               decoration: InputDecoration(
-                                hintText: "Email or Phone number",
+                                // fillColor: Colors.lightBlue[50],
+                                // filled: true,
+                                labelText: "Email or Phone number",
+                                hintText: "Enter Email or Phone number",
                                 hintStyle: TextStyle(color: Colors.grey),
-                                border: InputBorder.none,
+                                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
                                 prefixIcon: Icon(Icons.email),
                               ),
+                              keyboardType: TextInputType.emailAddress,
                             ),
                           ),
                           Container(
                             padding: EdgeInsets.all(5),
-                            decoration: BoxDecoration(
-                              border: Border(
-                                  bottom: BorderSide(color: Colors.grey)),
-                            ),
                             child: TextField(
                               obscureText: true,
                               decoration: InputDecoration(
-                                hintText: "Password",
+                                // fillColor: Colors.lightBlue[50],
+                                // filled: true,
+                                labelText: "Password",
+                                hintText: "Enter Password",
                                 hintStyle: TextStyle(color: Colors.grey),
-                                border: InputBorder.none,
+                                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
                                 prefixIcon: Icon(Icons.lock),
                                 // suffixIcon: Icon(Icons.remove_red_eye),
                               ),
+                              keyboardType: TextInputType.visiblePassword,
                             ),
                           ),
                         ],

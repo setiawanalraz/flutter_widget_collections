@@ -68,64 +68,60 @@ class Register extends StatelessWidget {
                           children: [
                             Container(
                               padding: EdgeInsets.all(5),
-                              decoration: BoxDecoration(
-                                border: Border(
-                                    bottom: BorderSide(color: Colors.grey)),
-                              ),
                               child: TextField(
                                 decoration: InputDecoration(
-                                  hintText: "Full Name",
+                                  labelText: "Full name",
+                                  hintText: "Enter Full name",
                                   hintStyle: TextStyle(color: Colors.grey),
-                                  border: InputBorder.none,
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10)),
                                   prefixIcon: Icon(Icons.account_box),
                                 ),
+                                keyboardType: TextInputType.name,
                               ),
                             ),
                             Container(
                               padding: EdgeInsets.all(5),
-                              decoration: BoxDecoration(
-                                border: Border(
-                                    bottom: BorderSide(color: Colors.grey)),
-                              ),
                               child: TextField(
                                 decoration: InputDecoration(
-                                  hintText: "Email or Phone number",
+                                  labelText: "Email or Phone number",
+                                  hintText: "Enter Email or Phone number",
                                   hintStyle: TextStyle(color: Colors.grey),
-                                  border: InputBorder.none,
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10)),
                                   prefixIcon: Icon(Icons.email),
                                 ),
+                                keyboardType: TextInputType.emailAddress,
                               ),
                             ),
                             Container(
                               padding: EdgeInsets.all(5),
-                              decoration: BoxDecoration(
-                                border: Border(
-                                    bottom: BorderSide(color: Colors.grey)),
-                              ),
                               child: TextField(
                                 obscureText: true,
                                 decoration: InputDecoration(
-                                  hintText: "Password",
+                                  labelText: "Password",
+                                  hintText: "Enter Password",
                                   hintStyle: TextStyle(color: Colors.grey),
-                                  border: InputBorder.none,
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10)),
                                   prefixIcon: Icon(Icons.lock),
                                 ),
+                                keyboardType: TextInputType.visiblePassword,
                               ),
                             ),
                             Container(
                               padding: EdgeInsets.all(5),
-                              decoration: BoxDecoration(
-                                border: Border(
-                                    bottom: BorderSide(color: Colors.grey)),
-                              ),
                               child: TextField(
                                 obscureText: true,
                                 decoration: InputDecoration(
-                                  hintText: "Confirm Password",
+                                  labelText: "Confirm Password",
+                                  hintText: "Enter Confirmation Password",
                                   hintStyle: TextStyle(color: Colors.grey),
-                                  border: InputBorder.none,
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10)),
                                   prefixIcon: Icon(Icons.lock),
                                 ),
+                                keyboardType: TextInputType.visiblePassword,
                               ),
                             ),
                           ],

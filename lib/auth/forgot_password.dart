@@ -67,17 +67,15 @@ class ForgotPassword extends StatelessWidget {
                           children: [
                             Container(
                               padding: EdgeInsets.all(5),
-                              decoration: BoxDecoration(
-                                border: Border(
-                                    bottom: BorderSide(color: Colors.grey)),
-                              ),
                               child: TextField(
                                 decoration: InputDecoration(
-                                  hintText: "Email or Phone number",
+                                  labelText: "Email or Phone number",
+                                  hintText: "Enter Email or Phone number",
                                   hintStyle: TextStyle(color: Colors.grey),
-                                  border: InputBorder.none,
+                                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
                                   prefixIcon: Icon(Icons.email),
                                 ),
+                                keyboardType: TextInputType.emailAddress,
                               ),
                             ),
                           ],

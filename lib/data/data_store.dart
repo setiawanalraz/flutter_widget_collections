@@ -41,4 +41,9 @@ List<Store> storeItems = [
     itemImage: "https://goo.gl/u2qZQB",
     itemUrl: "https://github.com/",
   ),
+  Store.items(
+    itemName: "GitHub v2",
+    itemImage: "https://goo.gl/u2qZQB",
+    itemUrl: "https://yandex.com/",
+  ),
 ];
