@@ -1,4 +1,4 @@
-import 'package:appbar_gradasi_dengan_corak/auth/login.dart';
+import '../auth/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import '../widget/custom_appbar.dart';
 import '../widget/navigation_drawer.dart';
-import 'package:appbar_gradasi_dengan_corak/data/data_store.dart';
-import 'package:appbar_gradasi_dengan_corak/style/style.dart';
+import '../../data/data_store.dart';
+import '../../style/style.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MyCardItem extends StatelessWidget {
@@ -24,7 +23,7 @@ class MyCardItem extends StatelessWidget {
                 onTap: () async {
                   final message = SnackBar(
                     content:
-                        Text("You were opened " + storeItems[index].itemName!),
+                        Text("You were opened " + storeItems[index].itemName),
                     action: SnackBarAction(
                       label: "dismiss",
                       onPressed: () {},
@@ -33,7 +32,7 @@ class MyCardItem extends StatelessWidget {
                   ScaffoldMessenger.of(context).showSnackBar(message);
 
                   //open URL
-                  await openUrl(storeItems[index].itemUrl!,
+                  await openUrl(storeItems[index].itemUrl,
                       forceWebView: true, enableJavaScript: true);
                 },
                 child: Stack(
@@ -42,7 +41,7 @@ class MyCardItem extends StatelessWidget {
                     Container(
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: NetworkImage(storeItems[index].itemImage!),
+                          image: NetworkImage(storeItems[index].itemImage),
                         ),
                       ),
                     ),
@@ -51,7 +50,7 @@ class MyCardItem extends StatelessWidget {
                       height: 40,
                       decoration: customBoxDecoration,
                       child: Text(
-                        storeItems[index].itemName!,
+                        storeItems[index].itemName,
                         style: TextStyle(color: Colors.white),
                       ),
                     )

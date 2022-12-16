@@ -1,6 +1,6 @@
-import 'package:appbar_gradasi_dengan_corak/auth/login.dart';
-import 'package:appbar_gradasi_dengan_corak/style/style.dart';
 import 'package:flutter/material.dart';
+import '../../auth/login.dart';
+import '../../style/style.dart';
 // import 'package:flutter/services.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {

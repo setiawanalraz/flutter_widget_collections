@@ -1,12 +1,12 @@
 class Store {
-  String? itemName;
-  String? itemImage;
-  String? itemUrl;
+  String itemName;
+  String itemImage;
+  String itemUrl;
 
   Store.items({
-    this.itemName,
-    this.itemImage,
-    this.itemUrl,
+    required this.itemName,
+    required this.itemImage,
+    required this.itemUrl,
   });
 }
 

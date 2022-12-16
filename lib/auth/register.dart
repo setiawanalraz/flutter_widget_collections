@@ -1,7 +1,6 @@
+import 'package:flutter/material.dart';
 import '../auth/login.dart';
 import '../style/style.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
 class Register extends StatelessWidget {
   @override

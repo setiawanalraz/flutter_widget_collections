@@ -13,8 +13,8 @@ class NavigationDrawerWidget extends StatelessWidget {
     final name = "Alaraz Wari Setiawan";
     final email = "alrazsetiawan79@gmail.com";
     final urlImage =
-        "http://www.bbk.ac.uk/mce/wp-content/uploads/2015/03/8327142885_9b447935ff.jpg";
-
+        "https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+    
     return Drawer(
       child: Material(
         color: Color.fromRGBO(50, 75, 205, 20),

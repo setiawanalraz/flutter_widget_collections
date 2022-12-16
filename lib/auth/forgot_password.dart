@@ -1,6 +1,5 @@
-import '../style/style.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../style/style.dart';
 
 class ForgotPassword extends StatelessWidget {
   @override

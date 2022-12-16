@@ -1,9 +1,8 @@
+import 'package:flutter/material.dart';
 import '../auth/forgot_password.dart';
 import '../auth/register.dart';
 import '../style/style.dart';
 import '../view/page/flexible_page.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
   @override
