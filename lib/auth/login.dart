@@ -26,14 +26,14 @@ class Login extends StatelessWidget {
                 children: [
                   Text(
                     "Login",
-                    style: TextStyle(color: Colors.white, fontSize: 40),
+                    style: title,
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   Text(
                     "Welcome Back",
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                    style: subTitle,
                   ),
                 ],
               ),

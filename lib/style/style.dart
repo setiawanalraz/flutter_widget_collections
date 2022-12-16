@@ -1,4 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+TextStyle title = GoogleFonts.poppins(
+  fontSize: 40,
+  fontWeight: FontWeight.bold,
+  color: Colors.white,
+);
+
+TextStyle subTitle = GoogleFonts.poppins(
+  fontSize: 20,
+  fontWeight: FontWeight.w600,
+  color: Colors.white,
+);
 
 BoxDecoration customBoxDecoration = BoxDecoration(
   gradient: LinearGradient(

@@ -1,5 +1,5 @@
-import '../../style/style.dart';
 import 'package:flutter/material.dart';
+import '../../style/style.dart';
 
 class UserPage extends StatelessWidget {
   final String name;
@@ -26,6 +26,9 @@ class UserPage extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         fit: BoxFit.cover,
+        loadingBuilder: (context, child, progress) {
+          return progress == null ? child : Center(child: CircularProgressIndicator());
+        },
       ),
     );
   }

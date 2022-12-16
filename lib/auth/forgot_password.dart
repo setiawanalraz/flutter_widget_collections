@@ -23,14 +23,14 @@ class ForgotPassword extends StatelessWidget {
                   children: [
                     Text(
                       "Forgot Your Password?",
-                      style: TextStyle(color: Colors.white, fontSize: 40),
+                      style: title,
                     ),
                     SizedBox(
                       height: 10,
                     ),
                     Text(
                       "Don't worry you can reset your password here",
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+                      style: subTitle,
                     ),
                   ],
                 ),

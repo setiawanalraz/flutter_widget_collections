@@ -24,14 +24,14 @@ class Register extends StatelessWidget {
                   children: [
                     Text(
                       "Register",
-                      style: TextStyle(color: Colors.white, fontSize: 40),
+                      style: title,
                     ),
                     SizedBox(
                       height: 10,
                     ),
                     Text(
                       "Sign up your new account",
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+                      style: subTitle,
                     ),
                   ],
                 ),
