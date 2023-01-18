@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widget/custom_appbar.dart';
 import '../widget/navigation_drawer.dart';
-import '../../data/data_store.dart';
+import '../../model/data_model.dart';
 import '../../style/style.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -14,7 +14,7 @@ class MyCardItem extends StatelessWidget {
       body: GridView.builder(
         gridDelegate:
             SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-        itemCount: storeItems.length,
+        itemCount: dataModelItems.length,
         itemBuilder: (BuildContext context, int index) {
           return Card(
             elevation: 5,
@@ -23,7 +23,7 @@ class MyCardItem extends StatelessWidget {
                 onTap: () async {
                   final message = SnackBar(
                     content:
-                        Text("You were opened " + storeItems[index].itemName),
+                        Text("You were opened " + dataModelItems[index].itemName),
                     action: SnackBarAction(
                       label: "dismiss",
                       onPressed: () {},
@@ -32,7 +32,7 @@ class MyCardItem extends StatelessWidget {
                   ScaffoldMessenger.of(context).showSnackBar(message);
 
                   //open URL
-                  await openUrl(storeItems[index].itemUrl,
+                  await openUrl(dataModelItems[index].itemUrl,
                       forceWebView: true, enableJavaScript: true);
                 },
                 child: Stack(
@@ -41,7 +41,7 @@ class MyCardItem extends StatelessWidget {
                     Container(
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: NetworkImage(storeItems[index].itemImage),
+                          image: NetworkImage(dataModelItems[index].itemImage),
                         ),
                       ),
                     ),
@@ -50,7 +50,7 @@ class MyCardItem extends StatelessWidget {
                       height: 40,
                       decoration: customBoxDecoration,
                       child: Text(
-                        storeItems[index].itemName,
+                        dataModelItems[index].itemName,
                         style: TextStyle(color: Colors.white),
                       ),
                     )

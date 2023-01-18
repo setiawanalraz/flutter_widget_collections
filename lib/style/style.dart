@@ -15,14 +15,16 @@ TextStyle subTitle = GoogleFonts.poppins(
 
 BoxDecoration customBoxDecoration = BoxDecoration(
   gradient: LinearGradient(
-      colors: [Color(0xff0096ff), Color(0xff6610f2)],
-      begin: FractionalOffset.topLeft,
-      end: FractionalOffset.bottomRight),
+    colors: [Color(0xff0096ff), Color(0xff6610f2)],
+    begin: FractionalOffset.topLeft,
+    end: FractionalOffset.bottomRight,
+  ),
 );
 
 BoxDecoration loginBoxDecoration = BoxDecoration(
   gradient: LinearGradient(
-      colors: [Color(0xff0096ff), Color(0xff6610f2)],
-      begin: FractionalOffset.topLeft,
-      end: FractionalOffset.topRight),
+    colors: [Color(0xff0096ff), Color(0xff6610f2)],
+    begin: FractionalOffset.topLeft,
+    end: FractionalOffset.topRight,
+  ),
 );
